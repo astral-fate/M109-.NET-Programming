@@ -18,9 +18,9 @@ public class Program{
            
             for (j=10; j<COLUMNS; j++) {
               
-               product[ROWS][COLUMNS] = i*j;
+               product[i][j] = i*j;
                
-               System.out.println(" " +product[ROWS][COLUMNS]);
+               System.out.println(" " +product[i][j]);
                
                }
                
