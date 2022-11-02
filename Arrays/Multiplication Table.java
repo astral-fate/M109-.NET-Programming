@@ -1,16 +1,14 @@
 import java.util.Scanner; 
 public class Program{
-  public static void main(String[] args){
-    
-     int ROWS = 20;
+     static int ROWS = 20;
 
-     int COLUMNS = 20;
-    
-    
-   
+    static int COLUMNS = 20;
+  
+  public static void  main(String[] args){
+
     int[][] product = new int[ROWS][COLUMNS];
 
-    System.out.println("Enter a Number : ");
+
     System.out.println("MULTIPLICATION TABLE"); 
     System.out.println(" ");
     int i,j;
