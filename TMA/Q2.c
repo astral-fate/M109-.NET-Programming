@@ -12,7 +12,7 @@ for i in mylist:
         continue
     if (i<=10):
         count =count +1
-        arr=True
+        
     print("enter the weight of the bag")
     weight = 19
     if (weight>10 and weight<25 ):
