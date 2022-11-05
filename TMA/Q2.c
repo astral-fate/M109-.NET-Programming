@@ -14,12 +14,14 @@ for i in mylist:
         count =count +1
         arr=True
     print("enter the weight of the bag")
-    weight = 15
-    if (weight>10):
+    weight = 19
+    if (weight>10 and weight<25 ):
         extra = weight -10
-        sum = extra * 5
+        fees = extra * 5
+        total = (count * 500 )+ fees
+        print("The flight has" , count , "reserved seats with total income" , total ) 
+    
+    if (weight<=25 and weight==25 ):
         
-
-fees = count *500
-print("The flight has" , count , "reserved seats with total income" , fees+sum )        
-print("the extra fee is:", sum)
+        print("Reservation cancelled due to unallowed baggage weight")
+        break
