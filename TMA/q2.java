@@ -14,9 +14,9 @@ public class Main{
   int tiket = 500;
   boolean[] arr = new boolean[10];
   arr[0] = false;
-  int[] myArray = new int [10];
+  int[] myArray = new int [11];
                                 
-  while (true) { 
+  while (count<=10) { 
     System.out.println("enter seat number (-1 to end):");
     int user = scan.nextInt();
     //int user = 5;
@@ -25,6 +25,8 @@ public class Main{
        break;
       
       };
+      
+      
     if (user>10){ 
        break;
       
@@ -54,21 +56,21 @@ public class Main{
       
     System.out.println("enter the weight of the bag:"); 
     int weight = scan.nextInt();
-    //int weight = 15;
+   
     if (weight==10 || weight<=10){
         extra = 0; 
-        total = (count * tiket );
-        System.out.println("Reservation is confirmed for seat no. "+ i);
-        System.out.println("Fees of extra weight: "+ fees+ "$");
+        total = (count * tiket ) + extra;
+        System.out.println("Reservation is confirmed for seat no. "+ user);
+        System.out.println("Fees of extra weight: "+ extra+ "$");
         System.out.println("Total fees: "+ total +"$");
 
       } 
       
         if (weight==10 || weight<=20){
         extra = (weight - 10) * 5; 
-        total = (count * tiket );
+        total = (count * tiket )+ extra;
         System.out.println("Reservation is confirmed for seat no. "+ i);
-        System.out.println("Fees of extra weight: "+ fees+ "$");
+        System.out.println("Fees of extra weight: "+ extra+ " $");
         System.out.println("Total fees: "+ total +"$");
 
       } ; 
