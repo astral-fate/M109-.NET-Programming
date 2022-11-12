@@ -1,5 +1,5 @@
 import java.util.*;
-public class Program{
+public class Main{
   public static void main(String[] args){
   System.out.println("Enter a Number : ");
  // Scanner scan = new Scanner(System.in);
@@ -18,7 +18,8 @@ public class Program{
                                 
   while (true) { 
     System.out.println("enter seat number (-1 to end):");
-    int user =5;
+    int user = scan.nextInt();
+    //int user = 5;
     
     if (user ==-1){
        break;
@@ -28,23 +29,22 @@ public class Program{
        break;
       
       };
-       
-   for (int i =0;i<myArray.length; i++){
-    i=user;
-    myArray[i] = myArray[user];
- 
-     
-    if (arr[user-1] != true){
-        arr[i-1] = true;
       
-      } ;
-      
-    if (arr[user-1] == true){
+        if (arr[user-1] == true){
       
       System.out.println("Reservation cancelled due to unavailable seat number");
       break;
 
-      } ;
+      } ;  
+       
+   for (int i =0;i<user; ++i){
+    i=user;
+    arr[i-1] = true;   
+    
+    myArray[i] = myArray[user];
+ 
+     
+
       
     if (i<=10){
        count =count +1;
@@ -53,17 +53,26 @@ public class Program{
       
       
     System.out.println("enter the weight of the bag:"); 
-    //int weight = scan.nextInt();
-     int weight = 15;
-    
+    int weight = scan.nextInt();
+    //int weight = 15;
     if (weight==10 || weight<=10){
         extra = 0; 
         total = (count * tiket );
         System.out.println("Reservation is confirmed for seat no. "+ i);
-        System.out.println("Fees of extra weight:"+ fees+ "$");
+        System.out.println("Fees of extra weight: "+ fees+ "$");
         System.out.println("Total fees: "+ total +"$");
 
-      } ;
+      } 
+      
+        if (weight==10 || weight<=20){
+        extra = (weight - 10) * 5; 
+        total = (count * tiket );
+        System.out.println("Reservation is confirmed for seat no. "+ i);
+        System.out.println("Fees of extra weight: "+ fees+ "$");
+        System.out.println("Total fees: "+ total +"$");
+
+      } ; 
+      
       
      if (weight>=25 || weight==25){ 
         System.out.println("Reservation cancelled due to unallowed baggage weight");
@@ -76,7 +85,7 @@ public class Program{
     };
     
     System.out.println();
-    System.out.println("The flight has" + count + "reserved seats with total income" + total );       //1 mark
+    System.out.println("The flight has " + count + " reserved seats with total income " + total );       //1 mark
     System.out.println("Thank you for choosing our airlines ( AOU airline )");
     
     };
