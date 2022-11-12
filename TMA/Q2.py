@@ -4,14 +4,15 @@ fees = 0
 total = 0
 count =0
 i =0
-arr=[]
-
+tiket = 500
+arr = [False] * 10  
 
 while(True):
     print("enter seat number (-1 to end):");
     user = int(input())
-    mylist=[user]  
-   
+    mylist=[user]
+
+
     if user ==-1:    
         break
   
@@ -20,22 +21,24 @@ while(True):
      
     for i in mylist:
         
-        
-
+                
+        if arr[user-1] != True:
+            arr[i-1] = True
+            
+        elif arr[user-1] == True:
+             print("Reservation cancelled due to unavailable seat number")
+             break
+    
         if (i<=10):
             count =count +1
-            #arr[i]=True
-            
-        #if i in arr[i]:
-            #print("Reservation cancelled due to unavailable seat number")
-        
+
         
         print("enter the weight of the bag:")
         weight = int(input())
         
         if (weight==10 or weight<=10):
          extra = 0
-         total = (count * 500 ) 
+         total = (count * tiket ) 
          print("Reservation is confirmed for seat no. ", i)
          print("Fees of extra weight:", fees, "$")
          print("Total fees: ", total ,"$")
@@ -45,7 +48,7 @@ while(True):
         if (weight>10 and weight<25 ):
          extra = weight -10
          fees = extra * 5
-         total = (count * 500 )+ fees
+         total = (count * tiket )+ fees
         
         
          print("Reservation is confirmed for seat no. ", i)
